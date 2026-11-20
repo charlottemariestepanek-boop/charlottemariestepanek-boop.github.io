@@ -1,3 +1,298 @@
-ahooooj dneska jsem si koupila madla kafe 
-pariiiiiiiiisssss ayoooooooooo
-ňň ňň ňň
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris — La Vie Est Belle</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #f8f3ed;
+  color: #39332e;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  background: #f8f3ed;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #39332e;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+nav a:hover { color: #b77c72; }
+
+.hero {
+  min-height: 650px;
+  height: 85vh;
+  background:
+    linear-gradient(#211a1930,#211a1940),
+    url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2000&q=90')
+    center 55% / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content { padding: 20px; }
+
+.hero small {
+  letter-spacing: 6px;
+  font-size: 11px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(65px, 12vw, 130px);
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 22px;
+}
+
+.hero button {
+  margin-top: 35px;
+  padding: 16px 35px;
+  background: #f8f3ed;
+  border: none;
+  color: #39332e;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero button:hover {
+  background: #b77c72;
+  color: white;
+}
+
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #b77c72;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 5vw, 55px);
+  font-weight: 400;
+  margin: 18px 0;
+}
+
+.intro {
+  max-width: 570px;
+  margin: 0 auto;
+  color: #827a72;
+  line-height: 2;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 55px;
+}
+
+.card { text-align: left; }
+
+.card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.card img:hover { transform: translateY(-7px); }
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.card p {
+  color: #827a72;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.quote {
+  background: #e9ddd3;
+  padding: 100px 15%;
+  text-align: center;
+}
+
+.quote h2 {
+  font-style: italic;
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 45px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+footer {
+  background: #39332e;
+  color: #f8f3ed;
+  text-align: center;
+  padding: 55px 20px;
+}
+
+footer h2 { font-size: 35px; }
+
+footer p {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  color: #c7b8aa;
+}
+
+@media(max-width: 750px) {
+  nav { padding: 0 5%; }
+  nav a { margin-left: 10px; font-size: 8px; }
+  .grid { grid-template-columns: 1fr; }
+  .card img { height: 350px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery img { height: 190px; }
+  .section { padding: 75px 7%; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">PARIS.</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#places">Explore</a>
+    <a href="#gallery">Gallery</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <small>BIENVENUE À PARIS</small>
+    <h1>Paris, mon amour.</h1>
+    <p>Where every street tells a story.</p>
+    <button onclick="document.getElementById('about').scrollIntoView()">
+      DISCOVER PARIS
+    </button>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <span class="eyebrow">THE CITY OF LOVE</span>
+  <h2>Bonjour, Paris.</h2>
+  <p class="intro">
+    A city of beautiful little cafés, golden sunsets,
+    charming streets and timeless elegance.
+    Paris isn't just a destination. It's a feeling.
+  </p>
+</section>
+
+<section class="section" id="places" style="background:#f0e8df">
+  <span class="eyebrow">PLACES TO FALL IN LOVE WITH</span>
+  <h2>Discover the magic</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=800&q=85">
+      <h3>The Eiffel Tower</h3>
+      <p>The most iconic symbol of Paris. Beautiful in every season.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=85">
+      <h3>Parisian Streets</h3>
+      <p>Get lost in little streets and discover hidden treasures.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=85">
+      <h3>French Cafés</h3>
+      <p>Coffee, croissants and slow mornings. C'est magnifique!</p>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <span class="eyebrow">A LITTLE REMINDER</span>
+  <h2>"Paris is always a good idea."</h2>
+  <p class="intro">Romance is hidden in the smallest moments.</p>
+</section>
+
+<section class="section" id="gallery">
+  <span class="eyebrow">POSTCARDS FROM PARIS</span>
+  <h2>La beauté de Paris</h2>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600">
+    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600">
+    <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=600">
+  </div>
+</section>
+
+<footer>
+  <h2>À bientôt, Paris.</h2>
+  <p>MADE WITH ♡ & A LITTLE FRENCH MAGIC</p>
+  <p>© 2026 PARIS — LA VIE EST BELLE</p>
+</footer>
+
+</body>
+</html>
